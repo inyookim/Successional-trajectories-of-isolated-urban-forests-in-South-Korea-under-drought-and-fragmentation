@@ -2,8 +2,8 @@
 pacman::p_load(tidyverse, readxl, dplyr, ggthemes, haven, lavaan, lavaanPlot, knitr, psych, semTools, corrplot)
 
 ## read data
-setwd("E:/2024/도시숲2/review")
-alldf <- read_xlsx("./data_Inyoo_eng.xlsx")
+setwd("")
+alldf <- read_xlsx("./analysis_data.xlsx")
 str(alldf)
 # succession_pattern: 1 retrogressive, 0 progressive or as usual
 
@@ -101,4 +101,5 @@ parameterEstimates(fit, standardized=TRUE, rsquare = TRUE) %>%
 standardizedsolution(fit, type = "std.all", se = TRUE, zstat = TRUE, pvalue = TRUE, ci = TRUE)%>% 
   filter(op == "~") %>% 
   select(LV=lhs, Item=rhs, Coefficient=est.std, ci.lower, ci.upper, SE=se, Z=z, 'p-value'=pvalue)
+
 
