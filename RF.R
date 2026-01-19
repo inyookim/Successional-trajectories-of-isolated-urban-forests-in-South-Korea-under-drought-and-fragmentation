@@ -1,8 +1,8 @@
 ## library
 pacman::p_load(dplyr, readxl, ggplot2, tidyr, readxl, leaps, ranger, Boruta, DALEX, randomForest, caret, e1071)
 
-setwd("E:/2024/도시숲2/review")
-alldf <- read_xlsx("./data_Inyoo_eng.xlsx")
+setwd("")
+alldf <- read_xlsx("./analysis_data.xlsx")
 str(alldf)
 
 # select important column
@@ -244,3 +244,4 @@ ggplot(agr_profiles, aes(x = x_value, y = yhat)) +
   theme(
     legend.position = "bottom"
   )
+
